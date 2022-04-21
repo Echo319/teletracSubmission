@@ -27,16 +27,27 @@ Sample payload
 
 
 Completed with Spring boot
+
 RecordController takes in records like the sample payload regardless of capitalisation however all fields must not be null
+
 All routes will kick back a 401 with out the jwt token. Use localhost:8080/login?user=something&password=something to get the token 
+
 The user and password are not checked so put whatever 
+
 Contents are stored in a JPA repository that is connected to a MySQL DB, I have it set to use root/password as user credentials as I dont keep mysql running on my local machine
+
 Posts are logged with SLF4J 
+
 Basic expected routes are tested in src/test/java/com/example/teletracTest/TeletracTestApplicationTests.java
+
 The tests are the simple commands
 
 Run with "mvn spring-boot:run"
+
 hit login to get bearer token 
+
 POST /echo, /device or /nocontent to add records
+
 GET / and /{id} exist to prove its storing 
+
 use DELETE /{id} or /all to clean up 
