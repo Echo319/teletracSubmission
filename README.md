@@ -1,6 +1,6 @@
 
 TASK:
-
+```
 Java Developer Role – Practical Test
 Requirement
 Using any Java tools/framework, develop a backend to implement the following
@@ -23,7 +23,7 @@ Sample payload
    "FieldB": "xxx",
    "FieldC": 123.45
 }
-
+```
 
 
 Completed with Spring boot
@@ -33,4 +33,10 @@ The user and password are not checked so put whatever
 Contents are stored in a JPA repository that is connected to a MySQL DB, I have it set to use root/password as user credentials as I dont keep mysql running on my local machine
 Posts are logged with SLF4J 
 Basic expected routes are tested in src/test/java/com/example/teletracTest/TeletracTestApplicationTests.java
-The tests are the simple demo bits
+The tests are the simple commands
+
+Run with "mvn spring-boot:run"
+hit login to get bearer token 
+POST /echo, /device or /nocontent to add records
+GET / and /{id} exist to prove its storing 
+use DELETE /{id} or /all to clean up 
